@@ -25,5 +25,5 @@ router.register('top100',Top100ViewSet) # prefix = movies , viewset = MovieViewS
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('picks.urls'))
+    path('music/', include('picks.urls'))
 ]
