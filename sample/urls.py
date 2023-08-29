@@ -21,8 +21,9 @@ from picks.views import Top100ViewSet
 
 router = routers.DefaultRouter() 
 router.register('top100',Top100ViewSet) # prefix = movies , viewset = MovieViewSet
+# router.register('genre',GenreViewSet) # prefix = movies , viewset = MovieViewSet
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('top100/<int:pk>', include('picks.urls'))
+    path('', include('picks.urls'))
 ]

@@ -128,10 +128,48 @@ class ChartData:
         return re.sub(pattern, f"resize/{self.imageSize}", url)
     
 
+class ShowTop100:
+    def show():
+        chart = ChartData()
 
-chart = ChartData()
+        results = []
 
-for i in range(100):
-    print(chart[i].json())
+        for i in range(100):
+            #print(chart[i].json())
+            results.append(json.loads(chart[i].json()))
 
-print(chart.date)
+        print(chart.date)
+
+        transformed_data = [{'artist': item['artist'], 'genre': item['genre'], 'image': item['image'], 'title': item['title']} for item in results]
+        #print(transformed_data)
+
+        return transformed_data
+
+# class SelectedGenres:
+#     def getResults():
+#         return ShowTop100.show()
+
+#     def selected(selects):
+#         genres = []
+#         s = []
+
+#         results = SelectedGenres.getResults()
+
+#         for i in range(len(selects)):
+#             s.append(int(selects[i]))
+
+#         for i in range(len(results)):
+#             for n in s:
+#                 if (results[i]['rank'] == n):
+#                     genres.append(results[i]['genre'])
+
+#         return genres
+
+# selects = [33, 1, 23]
+
+# results = show()
+# genres = selected(results, selects)
+
+# print(results)
+# print(genres)
+
