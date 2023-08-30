@@ -24,6 +24,7 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense
 import random
 
+# 파이썬으로 편집해서 pickle로 저장한 학습데이터 가져오기
 ## Load pickle
 with open("/content/drive/MyDrive/x_tra.pickle","rb") as fr:
     X_train = pickle.load(fr)
