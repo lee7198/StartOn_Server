@@ -54,7 +54,8 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:8000"
+    "http://localhost:8000",
+    "https://port-0-starton-server-e9btb72mlgyiuqa8.sel4.cloudtype.app/"
 ]
 
 ROOT_URLCONF = 'sample.urls'
